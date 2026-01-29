@@ -8,22 +8,22 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static dev.gimme.pickaxeprogression.PickaxeTierHelper.isBlockedByPickaxeTier;
+import static dev.gimme.pickaxeprogression.PickaxeTierHelper.isToolBlockedFromMining;
 
 /**
- * Mixin to add pickaxe tier requirements for mining certain blocks.
+ * Mixin to add tool tier requirements for mining certain blocks.
  */
 @Mixin(Item.class)
-public abstract class PickaxeTierMixin {
+public abstract class ToolTierMixin {
 
     /**
-     * Adds pickaxe tier requirements for mining certain blocks.
+     * Adds tool tier requirements for mining certain blocks.
      */
     @Inject(method = "isCorrectToolForDrops", at = @At("HEAD"), cancellable = true)
     private void onIsCorrectForDrops(ItemStack stack, BlockState state, CallbackInfoReturnable<Boolean> cir) {
         var instance = (Item) (Object) this;
 
-        if (isBlockedByPickaxeTier(instance, state.getBlock())) {
+        if (isToolBlockedFromMining(instance, state.getBlock())) {
             cir.setReturnValue(false);
         }
     }
