@@ -1,20 +1,21 @@
 # Pickaxe Progression
 
-Adds some progression to mining by restricting pickaxes from mining the next tier of ores.
+Restricts pickaxes from mining the next tier of ores.
+
+The intent is to make the early game more challenging and add a sense of progression as you advance through the ages and gain access to new materials.
+The most reliable way to progress to the next "age" (wooden->stone->iron->diamond) is to find a Creeper and have it blow up the blocks you want.
 
 Note: the mod has to be installed on both the client and server with matching configurations.
 
 ## Features
-- Pickaxe tiers have extra mining restrictions:
-  - Wood can't mine stone
+- Pickaxe tiers have extra mining restrictions
+  - Wooden can't mine stone
   - Stone can't mine iron
   - Iron can't mine diamond
-- Iron Golems drop 1–3 iron ingots instead of 3–5 (balancing an otherwise easy skip to iron age)
+- Iron Golems drop 1–3 iron ingots instead of 3–5 (balancing an otherwise quick skip to iron age)
 
-The intent is to add meaningful progression to mining. To progress to the next "age" (stone, iron, diamond), you will likely need to blow the blocks up using creepers or TNT.
-
-Here are some tips that might help:
-- In the Wooden Age, you can mine coal and cook food in campfires.
+## Tips
+- In the wooden age, you can still mine coal and cook food in campfires.
 - When a Creeper blows up a block, there's a 1/3 chance it drops the item.
 - When TNT blows up a block, it always drops the item.
 
