@@ -26,8 +26,8 @@ public class NeoForgeCommonConfig extends CommonConfig {
                     () -> {
                         Config defaultConfig = TomlFormat.newConfig();
                         defaultConfig.set("wooden_pickaxe", "stone|deepslate|cobblestone|cobbled_deepslate|blackstone|andesite|calcite|diorite|granite|tuff");
-                        defaultConfig.set("stone_pickaxe|copper_pickaxe", "*.iron_ore|*.iron_block");
-                        defaultConfig.set("iron_pickaxe", "*.diamond_ore|diamond_block");
+                        defaultConfig.set("stone_pickaxe|copper_pickaxe", ".*iron_ore|.*iron_block");
+                        defaultConfig.set("iron_pickaxe", ".*diamond_ore|diamond_block");
                         return defaultConfig;
                     },
                     NeoForgeCommonConfig::validateRegexMap
