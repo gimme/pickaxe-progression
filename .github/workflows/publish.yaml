@@ -86,11 +86,11 @@ jobs:
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           # CurseForge
-          curseforge-id: <TODO>
+          curseforge-id: 1448707
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           # Modrinth
-          modrinth-id: <TODO>
+          modrinth-id: JjdaB5wU
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           # General
